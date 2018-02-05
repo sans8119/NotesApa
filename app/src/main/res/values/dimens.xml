@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="title_1">26sp</dimen>
+    <dimen name="note_title_text_size">16sp</dimen>
+    <dimen name="note_text__text_margin_top">14sp</dimen>
+    <dimen name="note_date_text_size">12sp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+</resources>

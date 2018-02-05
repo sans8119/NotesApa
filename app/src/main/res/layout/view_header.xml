@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_title_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/title_tv"
+            android:layout_marginTop="4dp"
+            android:gravity="left"
+            android:textColor="@color/black_1" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/desc_tv"
+            android:layout_marginTop="4dp"
+            android:gravity="left"
+            android:textColor="@color/grey" />
+
+        <ImageView
+            android:id="@+id/delete_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:onClick="onDeleteButtonClick"
+            android:paddingRight="3dp"
+            android:src="@android:drawable/ic_delete" />
+
+        <LinearLayout
+            android:id="@+id/images_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/title_tv"
+            android:layout_toLeftOf="@id/delete_iv"
+            android:orientation="vertical"
+            android:paddingRight="5dp">
+
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/poem_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/device_desc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background"
+                    android:onClick="onPoemButtonClick"
+                    android:text="@string/poem"
+                    android:textColor="@color/colorPrimary" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:id="@+id/story_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/device_desc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background"
+                    android:onClick="onStoryButtonClick"
+                    android:text="@string/story"
+                    android:textColor="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:id="@+id/starred_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/device_desc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:onClick="onStarredButtonClick"
+                    android:src="@android:drawable/star_big_off" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+                <ImageView
+                    android:id="@+id/hearted_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/device_desc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:onClick="onHeartedButtonClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/heart_empty" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
